@@ -10,7 +10,6 @@ if (process.env.NODE_ENV === 'dev') {
   app.use(morgan('dev'));
 }
 
-const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
@@ -32,3 +31,5 @@ app.get('/api/items', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+module.exports.app
